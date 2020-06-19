@@ -183,13 +183,143 @@
 
     /*YouTube CSS END */
 
+    /* EventBrite CSS START */
+
+     .ticket_purchasing_container {
+      font-family: 'Montserrat', sans-serif;
+      display: inline-flex;
+      flex-direction: column;
+      position: relative;
+      max-width: 100%;
+      width: 700px;
+    }
+    .ticket_purchasing_container span,
+    .ticket_purchasing_container div, 
+    .ticket_purchasing_container button {
+      font-family: inherit;
+    }
+    .ticket_purchasing_container_inner::before {
+      content: "";
+      display:block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: 0.5;
+    }
+    .ticket_purchasing_container .ticket_purchasing_container_inner {
+      display: flex;
+      padding: 20px 20px;
+    }
+    .ticket_purchasing_container .bg-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("foo.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      filter: blur(1px);
+    }
+    .ticket_purchasing_container h5,
+    .ticket_purchasing_container span {
+      position: relative;
+      margin: 0;
+      color: white;
+    }
+    .ticket_purchasing_container h5 {
+      font-weight: 300;
+    }
+    .ticket_purchasing_container h5 {
+      font-size: 40px;
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .ticket_purchasing_container h5::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 120%;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      height: 1px;
+    }
+    .ticket_purchasing_container span {
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .ticket_purchasing_container .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 10px;
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+    .ticket_purchasing_container .info .price {
+      display: flex;
+      justify-content: space-between;
+    }
+    .ticket_purchasing_container .btn {
+      position: relative;
+      display: block;
+      margin: 0 auto 20px;
+      padding: 15px 20px;
+      border: 1px solid white;
+      border-radius: 5px;
+      background-color: transparent;
+      color: white;
+      text-transform: uppercase;
+      font-size: 16px;
+      transition: all .5s;
+    }
+    .ticket_purchasing_container .btn:hover {
+      background-color: white;
+      color: black;
+    }
+
+
+    /* EventBrite CSS END */
+
+    /* Footer CSS START */
+
+    .footer-container {
+     color: #fff;
+    padding: 1em;
+    background-color: #051e53;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+​
+.col-sm-3 {
+    width: 25%;
+}
+​
+.col-sm-6 {
+    width: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+    /* Footer CSS END */
+
+
+
   </style>
   
 </head>
 <body>
 
 <div class="main-container">
-<img src="images/logo.png" alt="logo">
+<img src="/images/logo.png" alt="logo">
 
   <header>
   <img src="https://www.impericon.com/media/impericon/header/merchandise/foo_fighters/20170621_foo_fighters_header_mobile.jpg" alt="foo fighters" >
@@ -267,7 +397,23 @@
 
 
 
-    <section>Eventbrite</section>
+   <!-- Eventbrite Start -->
+
+	 <div class="ticket_purchasing_container">
+    <div class="bg-img"></div>
+    <div class="ticket_purchasing_container_inner">
+      <div class="info">
+        <h5>Foo Fighters Pub Sing</h5>
+        <div class="price">
+          <span>Price:</span>
+          <span>£15.00</span>
+        </div>
+      </div>
+    </div>
+    <button id="example-widget-trigger" class="btn" type="button">Buy Tickets</button>
+  </div>
+
+	 <!-- Eventbrite End -->
 
 <div class="mailchimp_container">
 
@@ -330,7 +476,32 @@
     <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
     </div>
 </form>
-</div>
+</div> <!-- MAILCHIMP ENDS -->
+
+
+<!-- FOOTER -->
+<footer>
+​
+    <div class="footer-container">
+        <div class="col-sm-3">
+            
+            <h4>wattsitarms</h4>
+            <img src="#">
+        </div>
+        <div class="col-sm-6">
+            <h4>about us</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            
+        </div>
+        <div class="col-sm-3">
+            <h4>follow</h4>
+              <i class="fa fa-facebook" aria-hidden="true"></i><i class="fa fa-instagram" aria-hidden="true"></i><i class="fa fa-twitter" aria-hidden="true"></i>
+            
+        </div>
+    </div>
+    
+</footer>
+
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email';fnames[2]='MMERGE2';ftypes[2]='radio';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
   
 <!--End mc_embed_signup-->
@@ -392,6 +563,21 @@
                 document.getElementById("button" + buttonNumber).classList.add("buttonSelected");
             }
         </script>
+
+
+        <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+  <script>
+      var exampleCallback = function() {
+    };
+    window.EBWidgets.createWidget({
+      widgetType: "checkout",
+      eventId: "110252893372",
+      modal: true,
+      modalTriggerElementId: "example-widget-trigger",
+      onOrderComplete: exampleCallback
+  });
+  </script>
+
 
 </div><!-- main-container ends -->
 </body>
