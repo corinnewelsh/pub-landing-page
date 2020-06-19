@@ -55,7 +55,23 @@ layout: base.njk
 
     </div>
 
-    <section>YouTube</section>
+    <!-- Youtube -->
+
+		<div class="YouTube_container">
+            <iframe id="videoFrame" width="560" height="315" src="https://www.youtube.com/embed/_u1SW0s9Hig" frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"></iframe>
+            <br />
+            <div class="ButtonContainer">
+                <button id="button1" class="buttonSelected" name="Track1" onclick="changeTrack(1)">Track 1</button> &nbsp;
+                <button id="button2" name="Track2" onclick="changeTrack(2)">Track 2</button> &nbsp;
+                <button id="button3" name="Track3" onclick="changeTrack(3)">Track 3</button> &nbsp;
+                <button name="Random" onclick="changeTrackRandom()">Random</button>
+            </div>
+        </div>
+
+		<!-- Youtube ends -->
+
+
+
     <section>Eventbrite</section>
 
 <div class="mailchimp_container">
@@ -125,3 +141,7 @@ layout: base.njk
 <!--End mc_embed_signup-->
   
 </div>
+<!-- End of Mailchimp -->
+
+
+
