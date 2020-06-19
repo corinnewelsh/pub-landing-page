@@ -219,6 +219,37 @@
       }
   </script>
 
+  <script type="text/javascript">
+            function getRandomInt(max) {
+                return Math.floor(Math.random() * Math.floor(max)) + 1;
+            }
+            var trackIdArray = [
+                "_u1SW0s9Hig",
+                "ZKb0lQlCYOE",
+                "TjVOWOKa-lY"
+            ];
+            function changeTrack(trackNumber) {
+                document.getElementById("videoFrame").src = "https://www.youtube.com/embed/" + trackIdArray[trackNumber - 1];
+                removeActive();
+                addActive(trackNumber);
+            }
+            function changeTrackRandom(trackNumber) {
+                var randomNumber = getRandomInt(3);
+                console.log(randomNumber);
+                document.getElementById("videoFrame").src = "https://www.youtube.com/embed/" + trackIdArray[randomNumber - 1];
+                removeActive();
+                addActive(randomNumber);
+            }
+            function removeActive() {
+                document.getElementById("button1").classList.remove("buttonSelected");
+                document.getElementById("button2").classList.remove("buttonSelected");
+                document.getElementById("button3").classList.remove("buttonSelected");
+            }
+            function addActive(buttonNumber) {
+                document.getElementById("button" + buttonNumber).classList.add("buttonSelected");
+            }
+        </script>
+
 </div><!-- main-container ends -->
 </body>
 </html>
