@@ -8,11 +8,11 @@
   <style>
 
   
-    div.container {
+    .main-container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 90%;
+      width: 100%;
       margin: 0 auto;
     }
     
@@ -38,7 +38,7 @@
     .spotify_row .container {
       background-color: #1db954;
       display: flex;
-      align-items: flex-start;
+      align-items: flex-start !important;
     }
     .spotify_row .col-sm-6 {
       width: calc(50% - 20px);
@@ -96,10 +96,101 @@
     }
     /*Spotify CSS END*/
 
+    /*MailChimp CSS START*/
+
+    .mailchimp_container #mc_embed_signup { 
+    clear:left; 
+    font:14px Helvetica,Arial,sans-serif;
+    border: 5px solid #444;
+    background-color: #eee; 
+}
+
+  .mailchimp_container h2 {
+  font-size: 10ems;
+  font-weight: 300;
+  color: #768d87;
+  filter: brightness(80%);
+}
+
+.mailchimp_container #mc-embedded-subscribe {
+  box-shadow:inset 0px 1px 3px 0px #91b8b3;
+  background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+  background-color:#768d87;
+  border-radius:20px;
+  border:1px solid #566963;
+  cursor:pointer;
+  color:#ffffff;
+  font-size:15px;
+  font-weight:bold;
+  padding:11px 23px;
+  text-decoration:none;
+  text-shadow:0px -1px 0px #2b665e;
+}
+
+.mailchimp_container #mc-embedded-subscribe:hover {
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	background-color:#6c7c7c;
+}
+
+.mailchimp_container #mc-embedded-subscribe:active {
+	position:relative;
+	top:1px;
+}
+
+
+    /*Mailchimp CSS END*/
+
+    /*YouTube CSS START */
+
+    .YouTube_container {
+                text-align: center;
+                background-color: #000;
+                padding: 50px;
+            }
+            .YouTube_container iframe {
+                border-radius: 15px;
+                background-color: black;
+                padding: 2px;
+                box-shadow: 0 10px 90px 0 purple;
+                margin-bottom: 50px;
+            }
+            .YouTube_container button {
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                cursor: pointer;
+                outline: none;
+                border: none;
+                font-size: 15px;
+                margin: 5px 1px;
+                padding: 15px 30px;
+                border-radius: 15px ;
+                transition-duration: 0.4s;
+                box-shadow: 0 10px 15px 0 rgba(0,0,0,0.2), 0 5px 20px 0 rgba(0,0,0,0.2);
+            }
+            .YouTube_container button:hover {
+                background-color: purple;
+                color: white;
+            }
+            .YouTube_container button:active {
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+            .YouTube_container .buttonSelected {
+                background-color: purple;
+                color: white;
+            }
+
+    /*YouTube CSS END */
+
   </style>
   
 </head>
 <body>
+
+<div class="main-container">
+<img src="images/logo.png" alt="logo">
+
   <header>
   <img src="https://www.impericon.com/media/impericon/header/merchandise/foo_fighters/20170621_foo_fighters_header_mobile.jpg" alt="foo fighters" >
   
@@ -107,8 +198,6 @@
   </header>
 
   
-<div class="container">
-
     <div class="spotify_row">
 
         <div class="container">
@@ -161,10 +250,97 @@
 
     </div>
 
-    <section>YouTube</section>
+    <!-- Youtube -->
+
+		<div class="YouTube_container">
+            <iframe id="videoFrame" width="560" height="315" src="https://www.youtube.com/embed/_u1SW0s9Hig" frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"></iframe>
+            <br />
+            <div class="ButtonContainer">
+                <button id="button1" class="buttonSelected" name="Track1" onclick="changeTrack(1)">Track 1</button> &nbsp;
+                <button id="button2" name="Track2" onclick="changeTrack(2)">Track 2</button> &nbsp;
+                <button id="button3" name="Track3" onclick="changeTrack(3)">Track 3</button> &nbsp;
+                <button name="Random" onclick="changeTrackRandom()">Random</button>
+            </div>
+        </div>
+
+		<!-- Youtube ends -->
+
+
+
     <section>Eventbrite</section>
-    <section>Newsletter</section>
+
+<div class="mailchimp_container">
+
+<!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+<!-- <style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; } 
+ 	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */ 
+</style> -->
+  
+<!-- Start of the Mailchimp form  -->
+<div id="mc_embed_signup">
+<form action="https://gmail.us10.list-manage.com/subscribe/post?u=9863a82eb8c557246b803f4e8&amp;id=fcfeb60601" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<h2>Subscribe to our newsletter</h2>
+<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="mc-field-group">
+	<label for="mce-FNAME">First Name  <span class="asterisk">*</span>
+</label>
+	<input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
 </div>
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+</label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+<div class="mc-field-group input-group">
+    Have you been to one of our events before?
+    <ul><li><input type="radio" value="Yes" name="MMERGE2" id="mce-MMERGE2-0"><label for="mce-MMERGE2-0">Yes</label></li>
+<li><input type="radio" value="No" name="MMERGE2" id="mce-MMERGE2-1"><label for="mce-MMERGE2-1">No</label></li>
+</ul>
+</div>
+      
+<!-- The birthday and preferred genres questions - commented out -->
+<!-- <div class="mc-field-group size1of2">
+	<label for="mce-BIRTHDAY-month">Birthday </label>
+	<div class="datefield">
+		<span class="subfield monthfield"><input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="MM" size="2" maxlength="2" name="BIRTHDAY[month]" id="mce-BIRTHDAY-month"></span> / 
+		<span class="subfield dayfield"><input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="DD" size="2" maxlength="2" name="BIRTHDAY[day]" id="mce-BIRTHDAY-day"></span> 
+		<span class="small-meta nowrap">( mm / dd )</span>
+	</div>
+</div><div class="mc-field-group input-group">
+    <strong>Genre </strong>
+    <ul><li><input type="checkbox" value="1" name="group[33109][1]" id="mce-group[33109]-33109-0"><label for="mce-group[33109]-33109-0">Rock / Indie / Metal</label></li>
+<li><input type="checkbox" value="2" name="group[33109][2]" id="mce-group[33109]-33109-1"><label for="mce-group[33109]-33109-1">Pop</label></li>
+<li><input type="checkbox" value="4" name="group[33109][4]" id="mce-group[33109]-33109-2"><label for="mce-group[33109]-33109-2">80s</label></li>
+<li><input type="checkbox" value="8" name="group[33109][8]" id="mce-group[33109]-33109-3"><label for="mce-group[33109]-33109-3">Karaoke</label></li>
+<li><input type="checkbox" value="16" name="group[33109][16]" id="mce-group[33109]-33109-4"><label for="mce-group[33109]-33109-4">Dance / Techno</label></li>
+<li><input type="checkbox" value="32" name="group[33109][32]" id="mce-group[33109]-33109-5"><label for="mce-group[33109]-33109-5">Soul / Jazz</label></li>
+</ul>
+</div> -->
+      
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_9863a82eb8c557246b803f4e8_fcfeb60601" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email';fnames[2]='MMERGE2';ftypes[2]='radio';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+  
+<!--End mc_embed_signup-->
+  
+</div>
+<!-- End of Mailchimp -->
+
+
+
+
   
 
   <!-- Spotify JS -->
@@ -186,5 +362,37 @@
       }
   </script>
 
+  <script type="text/javascript">
+            function getRandomInt(max) {
+                return Math.floor(Math.random() * Math.floor(max)) + 1;
+            }
+            var trackIdArray = [
+                "_u1SW0s9Hig",
+                "ZKb0lQlCYOE",
+                "TjVOWOKa-lY"
+            ];
+            function changeTrack(trackNumber) {
+                document.getElementById("videoFrame").src = "https://www.youtube.com/embed/" + trackIdArray[trackNumber - 1];
+                removeActive();
+                addActive(trackNumber);
+            }
+            function changeTrackRandom(trackNumber) {
+                var randomNumber = getRandomInt(3);
+                console.log(randomNumber);
+                document.getElementById("videoFrame").src = "https://www.youtube.com/embed/" + trackIdArray[randomNumber - 1];
+                removeActive();
+                addActive(randomNumber);
+            }
+            function removeActive() {
+                document.getElementById("button1").classList.remove("buttonSelected");
+                document.getElementById("button2").classList.remove("buttonSelected");
+                document.getElementById("button3").classList.remove("buttonSelected");
+            }
+            function addActive(buttonNumber) {
+                document.getElementById("button" + buttonNumber).classList.add("buttonSelected");
+            }
+        </script>
+
+</div><!-- main-container ends -->
 </body>
 </html>
